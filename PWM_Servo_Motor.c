@@ -45,22 +45,22 @@ int main() {
     while (true) {
 
         pwm_set_gpio_level(SERVO_PIN, 3000); //define o nível atual do PWM (duty cycle)
-        pwm_set_gpio_level(LED_PIN, 0); //definir o cico de trabalho (duty cycle) do pwm
-        printf("Ciclo ativo: 3000\n");//imprimir ciclo ativo do PWM - valor máximo é 2000
-        sleep_ms(5000); // Atraso de 1 segundo
+        pwm_set_gpio_level(LED_PIN, 3000); //definir o cico de trabalho (duty cycle) do pwm
+        printf("Ciclo ativo: 3000\n");//imprimir ciclo ativo do PWM 
+        sleep_ms(5000); // Atraso de 5 segundo
         
 
         pwm_set_gpio_level(SERVO_PIN, 1850); //define o nível atual do PWM (duty cycle)
-        pwm_set_gpio_level(LED_PIN, 25000); //definir o cico de trabalho (duty cycle) do pwm
-        printf("Ciclo ativo: 1850\n");//imprimir ciclo ativo do PWM - valor máximo é 2000
-        sleep_ms(5000); // Atraso de 1 segundo
+        pwm_set_gpio_level(LED_PIN, 1850); //definir o cico de trabalho (duty cycle) do pwm
+        printf("Ciclo ativo: 1850\n");//imprimir ciclo ativo do PWM 
+        sleep_ms(5000); // Atraso de 5 segundo
 
         pwm_set_gpio_level(SERVO_PIN, 625); //define o nível atual do PWM (duty cycle)
-        pwm_set_gpio_level(LED_PIN, 0); //definir o cico de trabalho (duty cycle) do pwm
-        printf("Ciclo ativo: 625\n");//imprimir ciclo ativo do PWM - valor máximo é 2000
-        sleep_ms(5000); // Atraso de 1 segundo
+        pwm_set_gpio_level(LED_PIN, 625); //definir o cico de trabalho (duty cycle) do pwm
+        printf("Ciclo ativo: 625\n");//imprimir ciclo ativo do PWM 
+        sleep_ms(5000); // Atraso de 5 segundo
 
-         // Loop que começa em 0, vai até 250000, incrementando de 100 em 100
+         // Loop que começa em 0, vai até 3000, incrementando de 5 em 5
     for (int i = 625; i <= 3000; i += 5) {
         printf("Ciclo ativo: %d\n", i); // Imprime o valor atual de i
         pwm_set_gpio_level(SERVO_PIN, i); //define o nível atual do PWM (duty cycle)
@@ -75,4 +75,5 @@ int main() {
     }
     }
 }
+
 
